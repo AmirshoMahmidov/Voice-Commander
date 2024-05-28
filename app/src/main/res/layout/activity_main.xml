@@ -8,59 +8,74 @@
     tools:context=".MainActivity">
 
 
+
+
+    <!-- Lottie Animation View для отображения анимации на фоне -->
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottieBackgroundAnimationView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:lottie_autoPlay="true"
+        app:lottie_fileName="background_animation.json"
+        app:lottie_loop="true" />
+
+    <!-- TextView для отображения распознанного текста -->
+
     <!-- Кнопка для активации микрофона -->
-
-    <!-- ImageView для отображения изображений -->
-
     <TextView
         android:id="@+id/textTest"
+        style="@style/Widget.AppCompat.TextView"
         android:layout_width="329dp"
-        android:layout_height="48dp"
+        android:layout_height="54dp"
         android:layout_marginStart="50dp"
-        android:layout_marginTop="81dp"
+        android:layout_marginTop="44dp"
         android:layout_marginEnd="50dp"
+        android:rotationX="1"
         android:text="Распознанный текст появится здесь"
         android:textSize="18sp"
+        android:textStyle="bold|italic"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- Изначально скрыт -->
-
     <Button
         android:id="@+id/btnMic"
-        android:layout_width="95dp"
-        android:layout_height="62dp"
+        android:layout_width="82dp"
+        android:layout_height="54dp"
         android:layout_marginBottom="88dp"
         android:text="Нажмите и говорите"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.537"
         app:layout_constraintStart_toStartOf="parent" />
 
+    <!-- ImageView для отображения изображений -->
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="279dp"
         android:layout_height="163dp"
         android:visibility="gone"
-        app:layout_constraintBottom_toTopOf="@+id/imageView2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.522"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textTest"
-        app:layout_constraintVertical_bias="0.416" />
+        app:layout_constraintTop_toBottomOf="@+id/textTest" />
 
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="181dp"
-        android:layout_height="119dp"
-        android:layout_marginStart="115dp"
-        android:layout_marginEnd="115dp"
+    <!-- Lottie Animation View для отображения анимации -->
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottieAnimationView"
+        android:layout_width="152dp"
+        android:layout_height="114dp"
         android:layout_marginBottom="68dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/miccc" />
+        app:lottie_fileName="animation.json" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
